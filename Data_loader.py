@@ -14,7 +14,7 @@ def Transition_matrix():
     transition = []
     for line in fhand:
         transition.append(list(map(float,list (line.split()) )))
-        
+    fhand.close()    
     return transition
 
 def Emission_matrix():
@@ -26,7 +26,7 @@ def Emission_matrix():
     emission = []
     for line in fhand:
         emission.append(list(map(float,list (line.split()) )))
-        
+    fhand.close()    
     return emission  
 
 def Initial_state_distribution():
@@ -38,7 +38,7 @@ def Initial_state_distribution():
     isd = []
     for line in fhand:
         isd.append(float(line.strip()))
-        
+    fhand.close()    
     return isd    
 
 def sequence_observation():
@@ -50,6 +50,6 @@ def sequence_observation():
     
     for line in fhand:
         obs = list(map(int,line.split() ))
-        
+    fhand.close()    
     return obs
     
